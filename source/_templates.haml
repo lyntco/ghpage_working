@@ -1,0 +1,37 @@
+%script#app-template{:type => "text/template"}
+  #projects
+    %h1 PROJECTS
+%script#project-list-template{:type => "text/template"}
+  {{ title }}
+  // <img src="{{imageThumb}}" alt="">
+%script#project-template{:type => "text/template"}
+  #project
+    %h2 {{ title }}
+    %h3
+      %a{:href => "{{ link }}"} {{ link }}
+    %img{:alt => "{{ title }}", :src => "{{ imageLarge }}"}
+      %p {{ summary }}
+      %p {{ detail }}
+      %ul {{ builtWith }}
+      %ul {{ collaborators }}
+%script#bio-template{:type => "text/template"}
+  #bio
+    %h2
+    %p
+    %h3 Skills:
+    %ul#skills-list
+      %li Ruby on Rails
+      %li Javascript/JQuery/Underscore
+      %li AJAX
+      %li Backbonejs
+%script#contact-template{:type => "text/template"}
+  #contact
+    %h2 Contact me!
+    %p You can find me at the following places:
+    %ul#contact-list
+      %li
+        %a{:href => "http://github.com/lyntco"} Github
+      %li
+        %a{:href => "http://blog.lynt.co"} Blog
+      %li
+        %a{:href => "http://twitter.com/strawz"} Twitter
