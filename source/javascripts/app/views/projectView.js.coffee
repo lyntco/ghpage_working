@@ -1,5 +1,5 @@
 window.app = window.app or {}
-app.ProjectView = class ProjectView extends Backbone.View
+class app.ProjectView extends Backbone.View
   el: "#main"
   initialize: ->
     @render()

@@ -2,19 +2,19 @@
 %html{:lang => "en"}
   %head
     %meta{:charset => "UTF-8"}
-      %title Lynt
+      %title LYNTCO - Larlyn Tanasap
       = stylesheet_link_tag('all', media: 'all')
       = javascript_include_tag('all')
   %body
     %nav
       %ul
         %li
-          %a{:href => ""} Projects
+          %a.navlink{:href => "#projects"} Projects
         %li
-          %a{:href => "#bio"} Bio
+          %a.navlink{:href => "#bio"} Bio
         %li
-          %a{:href => "#contact"} Contact
-    %h1 Lynt.co
+          %a.navlink{:href => "#contact"} Contact
+    %h1 LYNTCO
     #main
       = yield
     = partial './templates'

@@ -1,5 +1,5 @@
 window.app = window.app or {}
-app.AppView = class AppView extends Backbone.View
+class app.AppView extends Backbone.View
   el: "#main"
   initialize: ->
     @render()
@@ -8,4 +8,4 @@ app.AppView = class AppView extends Backbone.View
     @$el.html app.templates.appView
     @collection.each (p) ->
       view = new app.ProjectListView(model: p)
-      $("#projects").append view.render()
+      $("#my-projects").append view.render()

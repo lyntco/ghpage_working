@@ -1,5 +1,5 @@
 window.app = window.app or {}
-app.ProjectListView = class ProjectListView extends Backbone.View
+class app.ProjectListView extends Backbone.View
 
   # $el: '#main',
   tagName: "li"

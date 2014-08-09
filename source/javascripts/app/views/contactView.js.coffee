@@ -1,5 +1,5 @@
 window.app = window.app or {}
-app.ContactView = class app.ContactView extends Backbone.View
+class app.ContactView extends Backbone.View
   el: "#main"
   initialize: ->
 

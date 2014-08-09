@@ -1,9 +1,13 @@
 %script#app-template{:type => "text/template"}
-  #projects
+  #my-projects
     %h1 PROJECTS
 %script#project-list-template{:type => "text/template"}
-  {{ title }}
-  // <img src="{{imageThumb}}" alt="">
+  %ul.project-link
+    %li
+      -# %img{:src => "{{imageThumb}}", :alt => ""}
+      %img{:src => lorem.image('300x200'), :alt => ""}
+    %li
+      %h3 {{ title }}
 %script#project-template{:type => "text/template"}
   #project
     %h2 {{ title }}
@@ -16,13 +20,14 @@
       %ul {{ collaborators }}
 %script#bio-template{:type => "text/template"}
   #bio
-    %h2
+    %h2 About me
     %p
+      Studied Web Development Immersive at General Assembly Sydney and Graphic Design at Design Centre Enmore.
     %h3 Skills:
     %ul#skills-list
       %li Ruby on Rails
-      %li Javascript/JQuery/Underscore
-      %li AJAX
+      %li Coffeescript
+      %li SASS
       %li Backbonejs
 %script#contact-template{:type => "text/template"}
   #contact
@@ -35,3 +40,8 @@
         %a{:href => "http://blog.lynt.co"} Blog
       %li
         %a{:href => "http://twitter.com/strawz"} Twitter
+    %h3 Want to grab a coffee?
+    %p You can reach me at
+    %p 0432 871 070
+    %p or
+    %p strawww@gmail.com!

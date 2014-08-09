@@ -1,6 +1,8 @@
+# sets up the global object
 window.app = window.app or {}
-# app = app or {}
+
 $(document).ready ->
+  # Grabs templates off the page for user in views
   app.templates =
     appView: $("#app-template").html()
     projectListView: $("#project-list-template").html()
@@ -8,7 +10,6 @@ $(document).ready ->
     bioView: $("#bio-template").html()
     contactView: $("#contact-template").html()
 
-  console.log(app)
-  console.log(@)
+  # Initializes router
   app.router = new app.Router()
   Backbone.history.start()
