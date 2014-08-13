@@ -1,5 +1,5 @@
 window.app = window.app or {}
-class app.BioView extends Backbone.View
+app.BioView = Backbone.View.extend
   el: "#main"
   initialize: ->
 

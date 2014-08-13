@@ -1,5 +1,5 @@
 window.app = window.app or {}
 
-class app.Projects extends Backbone.Collection
+app.Projects = Backbone.Collection.extend
   url: "/projects"
   model: app.Project

@@ -1,5 +1,5 @@
 window.app = window.app or {}
-class app.Project extends Backbone.Model
+app.Project = Backbone.Model.extend
   urlRoot: "/projects"
   defaults:
     title: "Project"

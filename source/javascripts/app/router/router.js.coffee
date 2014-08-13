@@ -1,5 +1,5 @@
 window.app = window.app or {}
-class app.Router extends Backbone.Router
+app.Router = Backbone.Router.extend
   routes:
     "": "index"
     "projects": "index"
