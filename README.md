@@ -2,7 +2,7 @@
 
 ## Tools
 
-Middleman, Backbone, CoffeeScript), SASS.
+Middleman, Backbone, CoffeeScript, SASS.
 
 ## Output
 
