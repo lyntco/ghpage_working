@@ -13,25 +13,60 @@ app.Router = Backbone.Router.extend
         id: 1
         title: "DidThatFit.Me"
         summary: "Clothes gotta fit you man"
-        content: "MY SPIIIIIIIIINE!!!!"
       )
       new app.Project(
         id: 2
         title: "Fireball"
+        link: "http://fireballtalks.herokuapp.com"
+        imageLarge: "/images/project02.jpg"
+        imageThumb: "/images/project02_thumb.jpg"
+        images: [
+          "/images/project02_01.jpg"
+          "/images/project02_02.jpg"
+        ]
         summary: "Translation app"
-        content: "lolololo"
+        detail: "This is a detailed description of this Project"
+        builtWith: [
+          "Rails"
+          "Google Translate API"
+          "Javascript"
+          "Hosted by Heroku"
+        ]
+        collaborators: [
+          { name: "Rich Field", link: "http://github.com/toodelirious"}
+          { name: "Rira Choi", link: "http://github.com/rirachoi"}
+        ]
       )
       new app.Project(
         id: 3
         title: "Burning Airlines"
-        summary: "Burninggggg"
-        content: "Rawr"
+        # link: "http://fireballtalks.herokuapp.com"
+        imageLarge: "/images/project03.jpg"
+        imageThumb: "/images/project03_thumb.jpg"
+        images: [
+          "/images/project03_01.jpg"
+          "/images/project03_02.jpg"
+        ]
+        summary: "A flight booking app"
+        detail: "This is a detailed description of this Project"
+        builtWith: [
+          "Backbone"
+          "Rails"
+          "Javascript"
+          # "Hosted by Heroku"
+        ]
+        collaborators: [
+          { name: "Allen Hsu", link: "http://github.com/aldhsu"}
+        ]
       )
       new app.Project(
         id: 4
-        title: "??? It's a mystery"
-        summary: "My final. What will this be"
-        content: "Woop"
+        title: "StereoSpace"
+        summary: "A Music app"
+        content: "A digital soundboard you can record your beats on."
+        collaborators: [
+          { name: "Rich Field", link: "http://github.com/toodelirious"}
+        ]
       )
     ])
     console.log "routes init"

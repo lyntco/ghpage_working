@@ -16,13 +16,15 @@
     %img{:alt => "{{ title }}", :src => "{{ imageLarge }}"}
       %p {{ summary }}
       %p {{ detail }}
-      %ul {{ builtWith }}
-      %ul {{ collaborators }}
+      %ul
+        %li   {{ builtWith }}
+      %ul
+        %li {{ collaborators }}
 %script#bio-template{:type => "text/template"}
   #bio
     %h2 About me
     %p
-      I'm Larlyn Tanasap. I'm a full stack developer.
+      I'm Larlyn Tanasap! I'm a full stack developer.
     %p
       Studied Web Development Immersive at General Assembly Sydney and Graphic Design at Design Centre Enmore.
     %h3 Skills:
