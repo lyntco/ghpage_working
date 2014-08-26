@@ -13,9 +13,9 @@ app.Project = Backbone.Model.extend
     summary: "This is a project"
     detail: "This is a detailed description of this Project"
     builtWith: [
-      "Backbonejs"
-      "Handlebars"
-      "Javascript"
-      "Hosted by Github.io"
+      { item: "Backbonejs"}
+      { item: "Handlebars"}
+      { item: "Javascript"}
+      { item: "Hosted by Github.io"}
     ]
     collaborators: [] #objects for people {name: 'bob', link: 'http://github.com/bob'}

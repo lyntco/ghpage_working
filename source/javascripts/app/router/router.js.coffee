@@ -27,10 +27,10 @@ app.Router = Backbone.Router.extend
         summary: "Translation app"
         detail: "This is a detailed description of this Project"
         builtWith: [
-          "Rails"
-          "Google Translate API"
-          "Javascript"
-          "Hosted by Heroku"
+          { item: "Rails" }
+          { item: "Google Translate API" }
+          { item: "Javascript" }
+          { item: "Hosted by Heroku" }
         ]
         collaborators: [
           { name: "Rich Field", link: "http://github.com/toodelirious"}
@@ -50,10 +50,10 @@ app.Router = Backbone.Router.extend
         summary: "A flight booking app"
         detail: "This is a detailed description of this Project"
         builtWith: [
-          "Backbone"
-          "Rails"
-          "Javascript"
-          # "Hosted by Heroku"
+          { item: "Backbone" }
+          { item: "Rails" }
+          { item: "Javascript" }
+          # { item: "Hosted by Heroku" }
         ]
         collaborators: [
           { name: "Allen Hsu", link: "http://github.com/aldhsu"}

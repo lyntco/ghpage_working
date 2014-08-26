@@ -16,10 +16,17 @@
     %img{:alt => "{{ title }}", :src => "{{ imageLarge }}"}
       %p {{ summary }}
       %p {{ detail }}
+      %h3 Built with:
       %ul
-        %li   {{ builtWith }}
+        {{#each builtWith }}
+        %li {{ item }}
+        {{/each }}
+      %h3 Team:
       %ul
-        %li {{ collaborators }}
+        {{#each collaborators }}
+        %li
+          %a{:href => "{{link}}"} {{ name }}
+        {{/each }}
 %script#bio-template{:type => "text/template"}
   #bio
     %h2 About me
