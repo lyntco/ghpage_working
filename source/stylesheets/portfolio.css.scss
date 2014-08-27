@@ -23,6 +23,20 @@ nav ul li {
   display: inline-block;
 }
 
+#preload {
+  position: fixed;
+  background: #bfdddd;
+  z-index: 100;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+#preload h1, #preload h2 {
+  text-align: center;
+}
+
 #main {
 
 }

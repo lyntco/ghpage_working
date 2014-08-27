@@ -12,6 +12,7 @@ app.Router = Backbone.Router.extend
       new app.Project(
         id: 1
         title: "DidThatFit.Me"
+        link: "http://didthatfit.me"
         summary: "Clothes gotta fit you man"
       )
       new app.Project(
@@ -27,10 +28,10 @@ app.Router = Backbone.Router.extend
         summary: "Translation app"
         detail: "This is a detailed description of this Project"
         builtWith: [
-          { item: "Rails" }
-          { item: "Google Translate API" }
-          { item: "Javascript" }
-          { item: "Hosted by Heroku" }
+          "Rails"
+          "Google Translate API"
+          "Javascript"
+          "Hosted by Heroku"
         ]
         collaborators: [
           { name: "Rich Field", link: "http://github.com/toodelirious"}
@@ -50,13 +51,13 @@ app.Router = Backbone.Router.extend
         summary: "A flight booking app"
         detail: "This is a detailed description of this Project"
         builtWith: [
-          { item: "Backbone" }
-          { item: "Rails" }
-          { item: "Javascript" }
-          # { item: "Hosted by Heroku" }
+          "Backbone"
+          "Rails"
+          "Javascript"
+          # "Hosted by Heroku"
         ]
         collaborators: [
-          { name: "Allen Hsu", link: "http://github.com/aldhsu"}
+          { name: "Allen Hsu", link: "http://github.com/aldhsu" }
         ]
       )
       new app.Project(
@@ -65,7 +66,7 @@ app.Router = Backbone.Router.extend
         summary: "A Music app"
         content: "A digital soundboard you can record your beats on."
         collaborators: [
-          { name: "Rich Field", link: "http://github.com/toodelirious"}
+          { name: "Rich Field", link: "http://github.com/toodelirious" }
         ]
       )
     ])

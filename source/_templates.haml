@@ -19,7 +19,7 @@
       %h3 Built with:
       %ul
         {{#each builtWith }}
-        %li {{ item }}
+        %li {{ this }}
         {{/each }}
       %h3 Team:
       %ul
@@ -33,13 +33,17 @@
     %p
       I'm Larlyn Tanasap! I'm a full stack developer.
     %p
-      Studied Web Development Immersive at General Assembly Sydney and Graphic Design at Design Centre Enmore.
+      Studied Web Development Immersive at General Assembly Sydney in 2014 and Graphic Design at Design Centre Enmore ending in 2012.
+    %p In 2013, I worked in Walt Disney World as a Character performer.
+
     %h3 Skills:
     %ul#skills-list
       %li Ruby on Rails
       %li Coffeescript
       %li SASS
       %li Backbonejs
+
+
 %script#contact-template{:type => "text/template"}
   #contact
     %h2 Contact me!
