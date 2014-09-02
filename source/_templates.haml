@@ -21,12 +21,14 @@
         {{#each builtWith }}
         %li {{ this }}
         {{/each }}
+      {{#if collaborators}}
       %h3 Team:
       %ul
         {{#each collaborators }}
         %li
           %a{:href => "{{link}}"} {{ name }}
         {{/each }}
+      {{/if}}
 %script#bio-template{:type => "text/template"}
   #bio
     %h2 About me
@@ -34,14 +36,17 @@
       I'm Larlyn Tanasap! I'm a full stack developer.
     %p
       Studied Web Development Immersive at General Assembly Sydney in 2014 and Graphic Design at Design Centre Enmore ending in 2012.
-    %p In 2013, I worked in Walt Disney World as a Character performer.
+    %p
+      In 2013, I worked in Walt Disney World as a Character performer.
 
     %h3 Skills:
     %ul#skills-list
       %li Ruby on Rails
       %li Coffeescript
       %li SASS
-      %li Backbonejs
+      %li Backbone
+      %li Angular
+      %li Twitter Bootstrap
 
 
 %script#contact-template{:type => "text/template"}
