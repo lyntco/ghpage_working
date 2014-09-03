@@ -1,6 +1,8 @@
 %script#app-template{:type => "text/template"}
   #my-projects
     %h1 PROJECTS
+
+
 %script#project-list-template{:type => "text/template"}
   %ul.project-link
     %li
@@ -8,27 +10,33 @@
       %img{:src => lorem.image('300x200'), :alt => ""}
     %li
       %h3 {{ title }}
+
+
 %script#project-template{:type => "text/template"}
   #project
-    %h2 {{ title }}
-    %h3
-      %a{:href => "{{ link }}"} {{ link }}
-    %img{:alt => "{{ title }}", :src => "{{ imageLarge }}"}
-      %p {{ summary }}
-      %p {{ detail }}
-      %h3 Built with:
-      %ul
-        {{#each builtWith }}
-        %li {{ this }}
-        {{/each }}
-      {{#if collaborators}}
-      %h3 Team:
-      %ul
-        {{#each collaborators }}
-        %li
-          %a{:href => "{{link}}"} {{ name }}
-        {{/each }}
-      {{/if}}
+    -# %img{:alt => "{{ title }}", :src => "{{ imageLarge }}"}
+    %img{:alt => "{{ title }}", :src => lorem.image('200x400')}
+    .info
+      %h2 {{ title }}
+      %h3
+        %a{:href => "{{ link }}"} {{ link }}
+        %p {{ summary }}
+        %p {{ detail }}
+        %h3 Built with:
+        %ul.built-with
+          {{#each builtWith }}
+          %li {{ this }}
+          {{/each }}
+        -# {{#if collaborators}}
+        -# %h3 Team:
+        -# %ul
+        -#   {{#each collaborators }}
+        -#   %li
+        -#     %a{:href => "{{link}}"} {{ name }}
+        -#   {{/each }}
+        -# {{/if}}
+
+
 %script#bio-template{:type => "text/template"}
   #bio
     %h2 About me
@@ -41,13 +49,8 @@
 
     %h3 Skills:
     %ul#skills-list
-      %li Ruby on Rails
-      %li Coffeescript
-      %li SASS
-      %li Backbone
-      %li Angular
-      %li Twitter Bootstrap
-
+      - data.skills.skills.each do |skill|
+        %li= skill
 
 %script#contact-template{:type => "text/template"}
   #contact

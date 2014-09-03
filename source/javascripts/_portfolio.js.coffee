@@ -6,7 +6,7 @@ window.onload = ->
 
   $(document).ready ->
 
-    $('#preload').delay(1000).slideUp()
+    $('#preload').delay(1000).slideUp(800)
 
     # Grabs templates off the page for user in views
     app.templates =

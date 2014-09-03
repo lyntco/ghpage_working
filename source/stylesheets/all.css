@@ -1,5 +1,4 @@
 /*
-*= require normalize
 *= require_self
 *= require_tree .
 */
@@ -7,5 +6,5 @@
 @charset "utf-8";
 
 html {
-  background-image: url('/images/background.png')
+
 }

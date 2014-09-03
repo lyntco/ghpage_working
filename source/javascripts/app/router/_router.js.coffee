@@ -12,8 +12,20 @@ app.Router = Backbone.Router.extend
       new app.Project(
         id: 1
         title: "DidThatFit.Me"
-        link: "http://didthatfit.me"
+        link: "http://www.didthatfit.me"
         summary: "Clothes gotta fit you man"
+        imageLarge: "/images/project02.jpg"
+        imageThumb: "/images/project02_thumb.jpg"
+        images: [
+          "/images/project02_01.jpg"
+          "/images/project02_02.jpg"
+        ]
+        builtWith: [
+          "Rails"
+          "Google Translate API"
+          "Javascript"
+          "Hosted by Heroku"
+        ]
       )
       new app.Project(
         id: 2
@@ -63,34 +75,36 @@ app.Router = Backbone.Router.extend
       new app.Project(
         id: 4
         title: "StereoSpace"
+        link: "http://stereospace.herokuapp.com"
         summary: "A Music app"
         content: "A digital soundboard you can record your beats on."
+        builtWith: [
+          "Backbone"
+          "Rails"
+          "Coffeescript"
+          # "Hosted by Heroku"
+        ]
         collaborators: [
           { name: "Rich Field", link: "http://github.com/toodelirious" }
         ]
       )
     ])
-    console.log "routes init"
     return
   index: ->
     view = new app.AppView(collection: app.projects)
     view.render()
-    console.log "got to projects/index thing"
     return
   show: (id) ->
     # render single project
     project = app.projects.get(id)
     new app.ProjectView(model: project)
-    console.log "got to project " + id
     return
   bio: ->
     #render about view
     view = new app.BioView()
     view.render()
-    console.log "you got to bio"
     return
   contact: ->
     view = new app.ContactView()
     view.render()
-    console.log "you got to contact"
     return
