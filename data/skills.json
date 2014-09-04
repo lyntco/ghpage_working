@@ -3,11 +3,12 @@
     "Ruby on Rails",
     "Javascript",
     "Coffeescript",
-    "CSS3",
+    "HTML5/CSS3",
+    "HAML",
     "SASS",
-    "HTML5",
-    "Backbone",
-    "Angular",
-    "Twitter Bootstrap"
+    "Backbonejs",
+    "Angularjs",
+    "Twitter Bootstrap",
+    "PhoneGap"
   ]
 }

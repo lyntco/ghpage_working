@@ -14,16 +14,18 @@ app.Router = Backbone.Router.extend
         title: "DidThatFit.Me"
         link: "http://www.didthatfit.me"
         summary: "Clothes gotta fit you man"
-        imageLarge: "/images/project02.jpg"
-        imageThumb: "/images/project02_thumb.jpg"
+        imageLarge: "/images/project01.jpg"
+        imageThumb: "/images/project01_thumb.jpg"
         images: [
-          "/images/project02_01.jpg"
-          "/images/project02_02.jpg"
+          "/images/project01_01.jpg"
+          "/images/project01_02.jpg"
         ]
         builtWith: [
           "Rails"
+          "HAML"
           "Google Translate API"
-          "Javascript"
+          "Geocoder gem"
+          "Forecast.io gem"
           "Hosted by Heroku"
         ]
       )
