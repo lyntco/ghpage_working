@@ -48,32 +48,32 @@ app.Router = Backbone.Router.extend
           "Hosted by Heroku"
         ]
         collaborators: [
-          { name: "Rich Field", link: "http://github.com/toodelirious"}
+          { name: "Rich Field", link: "http://github.com/rich-field"}
           { name: "Rira Choi", link: "http://github.com/rirachoi"}
         ]
       )
-      new app.Project(
-        id: 3
-        title: "Burning Airlines"
-        # link: "http://fireballtalks.herokuapp.com"
-        imageLarge: "/images/project03.jpg"
-        imageThumb: "/images/project03_thumb.jpg"
-        images: [
-          "/images/project03_01.jpg"
-          "/images/project03_02.jpg"
-        ]
-        summary: "A flight booking app"
-        detail: "This is a detailed description of this Project"
-        builtWith: [
-          "Backbone"
-          "Rails"
-          "Javascript"
-          # "Hosted by Heroku"
-        ]
-        collaborators: [
-          { name: "Allen Hsu", link: "http://github.com/aldhsu" }
-        ]
-      )
+      # new app.Project(
+      #   id: 3
+      #   title: "Burning Airlines"
+      #   # link: "http://fireballtalks.herokuapp.com"
+      #   imageLarge: "/images/project03.jpg"
+      #   imageThumb: "/images/project03_thumb.jpg"
+      #   images: [
+      #     "/images/project03_01.jpg"
+      #     "/images/project03_02.jpg"
+      #   ]
+      #   summary: "A flight booking app"
+      #   detail: "This is a detailed description of this Project"
+      #   builtWith: [
+      #     "Backbone"
+      #     "Rails"
+      #     "Javascript"
+      #     # "Hosted by Heroku"
+      #   ]
+      #   collaborators: [
+      #     { name: "Allen Hsu", link: "http://github.com/aldhsu" }
+      #   ]
+      # )
       new app.Project(
         id: 4
         title: "StereoSpace"
@@ -87,7 +87,24 @@ app.Router = Backbone.Router.extend
           # "Hosted by Heroku"
         ]
         collaborators: [
-          { name: "Rich Field", link: "http://github.com/toodelirious" }
+          { name: "Rich Field", link: "http://github.com/rich-field" }
+        ]
+      )
+      new app.Project(
+        id: 5
+        title: "PubCrawlll"
+        link: "http://pubcrawl.herokuapp.com"
+        summary: "A social pub discovery app"
+        content: "Pub crawl"
+        builtWith: [
+          "PhoneGap"
+          "Backbone"
+          "Rails"
+          "HAML"
+          # "Hosted by Heroku"
+        ]
+        collaborators: [
+          { name: "Daisy Smith", link: "http://github.com/daisymarie128" }
         ]
       )
     ])

@@ -1,6 +1,6 @@
 %script#app-template{:type => "text/template"}
+  %h1 PROJECTS
   #my-projects
-    %h1 PROJECTS
 
 
 %script#project-list-template{:type => "text/template"}
@@ -50,7 +50,7 @@
     %h3 Skills:
     %ul#skills-list
       - data.skills.skills.each do |skill|
-        %li= skill
+        %li= link_to(skill.title, skill.url)
 
 %script#contact-template{:type => "text/template"}
   #contact

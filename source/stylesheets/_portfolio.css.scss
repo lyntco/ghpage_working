@@ -82,11 +82,14 @@ nav {
   margin: auto;
 
   #my-projects {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
     .project-link {
       padding: 2em;
     }
 
-    > li {
+    > div {
       display: inline-block;
     }
   }

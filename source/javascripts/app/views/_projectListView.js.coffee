@@ -2,7 +2,8 @@ window.app = window.app or {}
 app.ProjectListView = Backbone.View.extend
 
   # $el: '#main',
-  tagName: "li"
+  tagName: "div"
+  className: 'single-project'
   events:
     click: "view"
 
