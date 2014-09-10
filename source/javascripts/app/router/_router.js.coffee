@@ -95,6 +95,7 @@ app.Router = Backbone.Router.extend
           "Backbone"
           "Rails"
           "Coffeescript"
+          "Web Audio API"
           # "Hosted by Heroku"
         ]
         collaborators: [

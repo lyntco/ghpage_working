@@ -44,6 +44,10 @@ a:hover {
   color: #fff;
 }
 
+
+.highlight{
+  color: $highlight;
+}
 p {
   text-align: center;
 }
@@ -169,6 +173,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#712337', end
       // display: inline-block;
       vertical-align: top;
       padding-left: 2em;
+      max-width: 70%;
+      margin: 0 auto;
+    }
+
+    .text {
       max-width: 70%;
       margin: 0 auto;
     }

@@ -20,9 +20,10 @@
     .info
       %h2
         %a{:href => "{{ link }}"} {{ title }}
-      %h3 {{ summary }}
-      %p {{{ detail }}}
-      %h3 Built with:
+      .text
+        %h3 {{ summary }}
+        %p {{{ detail }}}
+        %h3 Built with:
       %ul.built-with
         {{#each builtWith }}
         %li {{ this }}
@@ -65,14 +66,14 @@
       %li ..And always learning more!
 %script#contact-template{:type => "text/template"}
   #contact
-    %h2 Contact me!
+    %h2.highlight Contact me!
     %p You can find me at the following places:
     %ul#contact-list
       - data.links.each do |link|
         %li
-          %a{:href => link.url}
+          %a{:href => link.url, :target=> '_blank'}
             = image_tag(link.title.downcase + ".svg")
-    %h3 Want to grab a coffee?
+    %h3.highlight Want to grab a coffee?
     %p You can reach me at
     %p 0432 871 070
     %p or
