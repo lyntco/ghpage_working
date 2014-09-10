@@ -220,7 +220,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#712337', end
 
 #bio {
   padding: 2em 15%;
+  text-align: center;
+  > img {
+    border-radius: 100%;
+    margin: 0 auto;
 
+  }
   h2 {
     color: $highlight;
   }
