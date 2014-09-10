@@ -1,16 +1,25 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
 
+$back: #0C1019;
+$dark: #712337;
+$medium: #A6768C;
+$light: #8399A3;
+$highlight: #D3E8E6;
+
 * {
   margin: 0;
   padding: 0;
   border: 0;
+  outline: none;
 }
 
 html {
   /*background-color: #999;*/
   font-family: 'Droid Sans', sans-serif;
   font-size: 16px;
+  background-color: $back;
+  color: $medium;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -22,13 +31,32 @@ li {
   list-style: none;
 }
 
+a {
+  color: $light;
+  text-decoration: none;
+}
+
+a:visited {
+  color: $highlight;
+}
+
+a:hover {
+  color: #fff;
+}
+
 p {
   text-align: center;
 }
 
 nav {
   display: block;
-
+  background-color: #111;
+  background-image: url('../images/smoky.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 1em;
+  text-transform: lowercase;
+  border-left: 3em;
 
   ul {
     margin: 1em auto;
@@ -39,13 +67,20 @@ nav {
     li {
       display: inline-block;
       padding: 0 1em;
+
     }
+
+    a:hover {
+      color: #fff;
+      border-bottom: 5px solid #fff;
+    }
+
   }
 
   svg {
-    height: 200px;
+    height: 100px;
     margin: 0 auto;
-    fill: #bf0000;
+    fill: #fff;
     display: block;
   }
 
@@ -63,8 +98,8 @@ nav {
 
   svg {
     margin: 0 auto;
-    min-width: 200px;
-    min-height: 200px;
+    // min-width: 100px;
+    min-height: 100px;
     height: 50%;
     width: 50%;
     display: block;
@@ -78,13 +113,17 @@ nav {
 }
 
 #main {
-  width: 90%;
+  width: 80%;
   margin: auto;
+  background: $dark;
+  min-height: calc(100vh - 3em);
+  padding-bottom: 3em;
 
   #my-projects {
     width: 80%;
     margin: 0 auto;
     text-align: center;
+
     .project-link {
       padding: 2em;
     }
@@ -92,23 +131,110 @@ nav {
     > div {
       display: inline-block;
     }
+
+    img {
+      max-width: 500px;
+      opacity: 0.5;
+      -webkit-transition: all 500ms ease-out;
+      -moz-transition: all 500ms ease-out;
+      -o-transition: all 500ms ease-out;
+      transition: all 500ms ease-out;
+    }
+
+    h2, h3 {
+      -webkit-transition: all 500ms ease-out;
+      -moz-transition: all 500ms ease-out;
+      -o-transition: all 500ms ease-out;
+      transition: all 500ms ease-out;
+    }
+    li:hover > img {
+      opacity: 1;
+    }
+
+    li:hover > h2, li:hover > h3 {
+      color: $highlight;
+    }
   }
 
   #project {
+
+    font-size: 1.5em;
     .info {
-      display: inline-block;
+      // display: inline-block;
       vertical-align: top;
       padding-left: 2em;
+      max-width: 70%;
+      margin: 0 auto;
     }
 
+    h3 {
+      margin-top: 2em;
+    }
     img {
-      display: inline-block;
+      width: 100%;
+      // display: inline-block;
+    }
+
+    ul {
+      text-align: center;
+    }
+
+    .more-images {
+      li {
+        display: inline-block;
+        max-width: 80%;
+      }
+
+      img {
+        display: inline-block;
+      }
     }
   }
 }
 
 .project-link:hover {
-  text-decoration: underline;
+  // text-decoration: underline;
+  color: $highlight;
   cursor: pointer;
 }
 
+#bio, #contact {
+  font-size:2.5em;
+  padding: 3em;
+  p {
+    margin-top: 1em;
+  }
+
+  ul {
+    display: block;
+    margin: 2em auto;
+    text-align: center;
+  }
+}
+
+#bio {
+  padding: 2em 5em;
+
+  h3 {
+    margin-top: 2em;
+  }
+}
+
+#contact {
+  font-size: 3em;
+
+  h3 {
+    margin-top: 2em;
+  }
+}
+
+#contact-list {
+  img {
+    width: 150px;
+  }
+
+  li {
+  display: inline-block;
+  padding: 1em 1em;
+}
+}

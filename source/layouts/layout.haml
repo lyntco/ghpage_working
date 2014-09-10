@@ -18,13 +18,15 @@
 
       %ul
         %li
-          %a.navlink{:href => "#projects"} Projects
+          %a.navlink{:href => "#web"} Web
+        -# %li
+        -#   %a.navlink{:href => "#design"} Design
         %li
           %a.navlink{:href => "#bio"} Bio
         %li
           %a.navlink{:href => "#contact"} Contact
         %li
-          %a.navlink{:href => "http://blog.lynt.co"} Blog
+          %a.navlink{:href => "http://blog.lynt.co", :target => '_blank'} Blog
 
 
     %div#preload
@@ -37,7 +39,6 @@
         %polygon{:points => "147.7,20 68.3,20 86.6,15.5 161.9,11.4 "}
         %polygon{:points => "62.2,160 141.6,160 123.3,164.5 47.9,168.6 "}
       %h2 Loading
-
     #main
       = yield
     = partial './templates'

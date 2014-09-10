@@ -1,5 +1,5 @@
 %script#app-template{:type => "text/template"}
-  %h1 PROJECTS
+  -# %h1 PROJECTS
   #my-projects
 
 
@@ -7,49 +7,59 @@
   %ul.project-link
     %li
       -# %img{:src => "{{imageThumb}}", :alt => ""}
-      %img{:src => lorem.image('300x200'), :alt => ""}
+      %img{:src => "{{imageThumb}}", :alt => "{{title}}"}
     %li
-      %h3 {{ title }}
+      %h2 {{ title }}
+      %h3 {{ summary }}
 
 
 %script#project-template{:type => "text/template"}
   #project
     -# %img{:alt => "{{ title }}", :src => "{{ imageLarge }}"}
-    %img{:alt => "{{ title }}", :src => lorem.image('200x400')}
+    %img{:alt => "{{ title }}", :src => "{{imageLarge}}"}
     .info
       %h2 {{ title }}
       %h3
         %a{:href => "{{ link }}"} {{ link }}
-        %p {{ summary }}
-        %p {{ detail }}
-        %h3 Built with:
-        %ul.built-with
-          {{#each builtWith }}
-          %li {{ this }}
-          {{/each }}
-        -# {{#if collaborators}}
-        -# %h3 Team:
-        -# %ul
-        -#   {{#each collaborators }}
-        -#   %li
-        -#     %a{:href => "{{link}}"} {{ name }}
-        -#   {{/each }}
-        -# {{/if}}
+      %h3 {{ summary }}
+      %p {{{ detail }}}
+      %h3 Built with:
+      %ul.built-with
+        {{#each builtWith }}
+        %li {{ this }}
+        {{/each }}
+      {{#if collaborators}}
+      %h3 Team:
+      %ul
+        {{#each collaborators }}
+        %li
+          %a{:href => "{{link}}"} {{ name }}
+        {{/each }}
+      {{/if}}
+      {{#if images}}
+      %ul.more-images
+        {{#each images }}
+        %li
+          = image_tag('{{this}}')
+        {{/each }}
+      {{/if}}
 
 
 %script#bio-template{:type => "text/template"}
   #bio
-    %h2 About me
+    %h2 I'm Larlyn Tanasap! I'm a full stack developer.
     %p
-      I'm Larlyn Tanasap! I'm a full stack developer.
+      I love problem solving and building things - I code, draw, design, make costumes, do photography, among other things. After attending a few Arduino workshops, I now have a keen interesting in programming hardware!
     %p
-      Studied Web Development Immersive at General Assembly Sydney in 2014 and Graphic Design at Design Centre Enmore ending in 2012.
+      I'm currently into making single page web apps with JavaScript MVCs and PhoneGap.
     %p
-      In 2013, I worked in Walt Disney World as a Character performer.
+      I studied Web Development Immersive at General Assembly Sydney in 2014 and Graphic Design at Design Centre Enmore ending in 2012.
+    %p
+      In 2013, I worked in Walt Disney World in Orlando, Florida as a Character performer.
 
     %h3 Skills:
     %ul#skills-list
-      - data.skills.skills.each do |skill|
+      - data.skills.each do |skill|
         %li= link_to(skill.title, skill.url)
 
 %script#contact-template{:type => "text/template"}
@@ -57,12 +67,10 @@
     %h2 Contact me!
     %p You can find me at the following places:
     %ul#contact-list
-      %li
-        %a{:href => "http://github.com/lyntco"} Github
-      %li
-        %a{:href => "http://blog.lynt.co"} Blog
-      %li
-        %a{:href => "http://twitter.com/strawz"} Twitter
+      - data.links.each do |link|
+        %li
+          %a{:href => link.url}
+            = image_tag(link.title.downcase + ".svg")
     %h3 Want to grab a coffee?
     %p You can reach me at
     %p 0432 871 070
