@@ -18,9 +18,8 @@
     -# %img{:alt => "{{ title }}", :src => "{{ imageLarge }}"}
     %img{:alt => "{{ title }}", :src => "{{imageLarge}}"}
     .info
-      %h2 {{ title }}
-      %h3
-        %a{:href => "{{ link }}"} {{ link }}
+      %h2
+        %a{:href => "{{ link }}"} {{ title }}
       %h3 {{ summary }}
       %p {{{ detail }}}
       %h3 Built with:
@@ -57,11 +56,11 @@
     %p
       In 2013, I worked in Walt Disney World in Orlando, Florida as a Character performer.
 
-    %h3 Skills:
+    %h3 Skillset:
     %ul#skills-list
       - data.skills.each do |skill|
         %li= link_to(skill.title, skill.url)
-
+      %li ..And always learning more!
 %script#contact-template{:type => "text/template"}
   #contact
     %h2 Contact me!

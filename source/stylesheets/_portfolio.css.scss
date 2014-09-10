@@ -23,7 +23,7 @@ html {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Oswald', sans-serif;
+  // font-family: 'Oswald', sans-serif;
   text-align: center;
 }
 
@@ -115,7 +115,14 @@ nav {
 #main {
   width: 80%;
   margin: auto;
-  background: $dark;
+  background: #712337; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, #712337 0%, #0c1019 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#712337), color-stop(100%,#0c1019)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover, #712337 0%,#0c1019 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover, #712337 0%,#0c1019 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover, #712337 0%,#0c1019 100%); /* IE10+ */
+background: radial-gradient(ellipse at center, #712337 0%,#0c1019 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#712337', endColorstr='#0c1019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   min-height: calc(100vh - 3em);
   padding-bottom: 3em;
 
@@ -157,7 +164,6 @@ nav {
   }
 
   #project {
-
     font-size: 1.5em;
     .info {
       // display: inline-block;
@@ -213,7 +219,11 @@ nav {
 }
 
 #bio {
-  padding: 2em 5em;
+  padding: 2em 15%;
+
+  h2 {
+    color: $highlight;
+  }
 
   h3 {
     margin-top: 2em;
@@ -233,8 +243,8 @@ nav {
     width: 150px;
   }
 
-  li {
-  display: inline-block;
-  padding: 1em 1em;
-}
+    li {
+    display: inline-block;
+    padding: 1em 1em;
+  }
 }
