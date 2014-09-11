@@ -1,5 +1,6 @@
 [
     {"title":"Ruby on Rails", "url":"http://rubyonrails.org/"},
+    {"title":"Git", "url":"http://git-scm.com/"},
     {"title":"Javascript", "url":"https://developer.mozilla.org/en/docs/Web/JavaScript"},
     {"title":"Coffeescript", "url":"http://coffeescript.org"},
     {"title":"HTML5/CSS3", "url":"http://www.w3.org/TR/html5/"},

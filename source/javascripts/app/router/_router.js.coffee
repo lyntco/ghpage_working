@@ -53,8 +53,8 @@ app.Router = Backbone.Router.extend
           "Hosted by Heroku"
         ]
         collaborators: [
-          { name: "Rich Field", link: "http://github.com/rich-field"}
-          { name: "Rira Choi", link: "http://github.com/rirachoi"}
+          { name: "Rich Field", link: "http://rich-field.github.io"}
+          { name: "Rira Choi", link: "http://rirachoi.github.io"}
         ]
       )
       # new app.Project(
@@ -90,7 +90,8 @@ app.Router = Backbone.Router.extend
         summary: "A digital soundboard you can record your beats on."
         detail:"<p>StereoSpace is an online sound studio built as a single page app.</p>
         <p>The keyboard is your soundboard. Once you like your beat, hit record and play that beat again to save it. </p>
-        <p>You can add as many tracks as you like, and you can move the sound segment you made along the track.</p>"
+        <p>You can add as many tracks as you like, and you can move the sound segment you made along the track.</p>
+        <p>We were inspired by an in browser soundboard called Patatap for this project. I wanted to challenge myself by adding a feature that recorded the sounds so you could replay them.</p>"
         builtWith: [
           "Backbone"
           "Rails"
@@ -99,7 +100,7 @@ app.Router = Backbone.Router.extend
           # "Hosted by Heroku"
         ]
         collaborators: [
-          { name: "Rich Field", link: "http://github.com/rich-field" }
+          { name: "Rich Field", link: "http://rich-field.github.io" }
         ]
       )
       new app.Project(
@@ -159,4 +160,4 @@ app.Router = Backbone.Router.extend
     return
   underlineNav: (name)->
     $('nav li a:not(:contains("'+name+'"))').css('border', 'none')
-    $('nav li a:contains("'+name+'")').css('border-bottom', '5px solid #ddd')
+    $('nav li a:contains("'+name+'")').css('border-bottom', '5px solid #712337')

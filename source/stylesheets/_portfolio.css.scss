@@ -34,6 +34,10 @@ li {
 a {
   color: $light;
   text-decoration: none;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
 }
 
 a:visited {
@@ -72,6 +76,14 @@ nav {
       display: inline-block;
       padding: 0 1em;
 
+    }
+
+    a {
+      color: $dark;
+    }
+
+    a:visited {
+      color: $dark;
     }
 
     a:hover {
@@ -120,13 +132,13 @@ nav {
   width: 80%;
   margin: auto;
   background: #712337; /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover, #712337 0%, #0c1019 100%); /* FF3.6+ */
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#712337), color-stop(100%,#0c1019)); /* Chrome,Safari4+ */
-background: -webkit-radial-gradient(center, ellipse cover, #712337 0%,#0c1019 100%); /* Chrome10+,Safari5.1+ */
-background: -o-radial-gradient(center, ellipse cover, #712337 0%,#0c1019 100%); /* Opera 12+ */
-background: -ms-radial-gradient(center, ellipse cover, #712337 0%,#0c1019 100%); /* IE10+ */
-background: radial-gradient(ellipse at center, #712337 0%,#0c1019 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#712337', endColorstr='#0c1019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: -moz-radial-gradient(center, ellipse cover, #712337 0%, #0c1019 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#712337), color-stop(100%,#0c1019)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, #712337 0%,#0c1019 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, #712337 0%,#0c1019 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, #712337 0%,#0c1019 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center, #712337 0%,#0c1019 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#712337', endColorstr='#0c1019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   min-height: calc(100vh - 3em);
   padding-bottom: 3em;
 
